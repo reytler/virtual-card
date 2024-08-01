@@ -8,12 +8,12 @@
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.js"></script>
 </head>
 <body>
-    <a-scene embedded arjs>
-        <a-marker preset="hiro">
+    <a-scene embedded arjs='sourceType: webcam; changeMatrixMode: modelViewMatrix; markersAreaEnabled: false;'>
+        <a-marker type="pattern" url="pattern.patt">
           <a-video src="#meu-video" width="1" height="0.5" position="0 0.25 0"></a-video>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>     
-    <video id="meu-video" src="seu-video.mp4" autoplay loop style="display: none;"></video>  
+    <video id="meu-video" src="myvideo.mp4" autoplay loop style="display: none;"></video>  
 </body>
 </html>
