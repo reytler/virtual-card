@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santinho Virtual</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <a-scene embedded arjs>
+        <a-marker preset="hiro">
+          <a-video src="#meu-video" width="1" height="0.5" position="0 0.25 0"></a-video>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>     
+    <video id="meu-video" src="seu-video.mp4" autoplay loop style="display: none;"></video>  
+</body>
+</html>
